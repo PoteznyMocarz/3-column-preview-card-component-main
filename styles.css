@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-org-color: hsl(31, 77%, 52%);
+    --dark-c-color: hsl(184, 100%, 22%);
+    --very-dark-c-color: hsl(179, 100%, 13%);
+    --t-white-color: hsla(0, 0%, 100%, 0.75);
+    --very-light-g-color: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-g-color);
+}
+
+.container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.sedans {
+    background-color: var(--bright-org-color);
+    padding: 15%;
+}
+
+img {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--very-light-g-color);
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 30px;
+    font-size: 16.7px;
+    color: var(--t-white-color);
+    line-height: 1.8;
+}
+
+button {
+    background-color: var(--very-light-g-color);
+    border: 2px solid var(--very-light-g-color);
+    padding: 12px 30px;
+    margin-top: 80px;
+    font-family: 'Lexend Deca', sans-serif;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    background: none;
+    color: var(--very-light-g-color);
+}
+
+.suvs {
+    background-color: var(--dark-c-color);
+    padding: 15%;
+}
+
+.suv-Btn {
+    color: var(--dark-c-color);
+}
+
+.sedan-Btn {
+    color: var(--bright-org-color);
+}
+
+.luxury {
+    background-color: var(--very-dark-c-color);
+    padding: 15%;
+}
+
+.luxury-Btn {
+    color: var(--very-dark-c-color);
+}
+
+
+@media (max-width: 450px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    body {
+        height: fit-content;
+        display: block;
+        padding: 90px 30px;
+    }
+
+    .sedans {
+        padding: 12%;
+    }
+    
+    .suvs {
+        padding: 12%;
+    }
+
+    .luxury {
+        padding: 12%;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+}
